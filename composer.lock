@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22d1d785afa4cfa6ed4baf68b706046f",
+    "content-hash": "0efd8fde2a9f0d6b3de7ddcf8c0179ae",
     "packages": [
         {
             "name": "n7e/configuration",
@@ -198,16 +198,16 @@
         },
         {
             "name": "n7e/service-provider",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/martin-pettersson/service-provider-php.git",
-                "reference": "424a544e06fc78c7548bd758e0821d29377f4770"
+                "reference": "0a9ae46d081322dc1f272a765c9f53f235fbc7eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/martin-pettersson/service-provider-php/zipball/424a544e06fc78c7548bd758e0821d29377f4770",
-                "reference": "424a544e06fc78c7548bd758e0821d29377f4770",
+                "url": "https://api.github.com/repos/martin-pettersson/service-provider-php/zipball/0a9ae46d081322dc1f272a765c9f53f235fbc7eb",
+                "reference": "0a9ae46d081322dc1f272a765c9f53f235fbc7eb",
                 "shasum": ""
             },
             "require": {
@@ -241,9 +241,9 @@
             "description": "A general purpose service provider abstraction.",
             "support": {
                 "issues": "https://github.com/martin-pettersson/service-provider-php/issues",
-                "source": "https://github.com/martin-pettersson/service-provider-php/tree/0.1.0"
+                "source": "https://github.com/martin-pettersson/service-provider-php/tree/0.2.0"
             },
-            "time": "2025-03-13T23:00:08+00:00"
+            "time": "2025-03-16T22:10:32+00:00"
         },
         {
             "name": "psr/container",
