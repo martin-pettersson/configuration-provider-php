@@ -14,7 +14,9 @@ use SlevomatCodingStandard\Sniffs\Arrays\TrailingArrayCommaSniff;
 use SlevomatCodingStandard\Sniffs\Classes\SuperfluousExceptionNamingSniff;
 use SlevomatCodingStandard\Sniffs\Classes\SuperfluousInterfaceNamingSniff;
 use SlevomatCodingStandard\Sniffs\Commenting\DocCommentSpacingSniff;
+use SlevomatCodingStandard\Sniffs\Commenting\InlineDocCommentDeclarationSniff;
 use SlevomatCodingStandard\Sniffs\ControlStructures\DisallowEmptySniff;
+use SlevomatCodingStandard\Sniffs\Functions\FunctionLengthSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DisallowArrayTypeHintSyntaxSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\ParameterTypeHintSniff;
@@ -47,8 +49,14 @@ return [
             'absoluteLineLimit' => 120,
             'ignoreComments' => true
         ],
+        FunctionLengthSniff::class => [
+            'maxLinesLength' => 30
+        ],
         CyclomaticComplexityIsHigh::class => [
             'maxComplexity' => 11
+        ],
+        InlineDocCommentDeclarationSniff::class => [
+            'allowAboveNonAssignment' => true
         ]
     ],
     'requirements' => [
