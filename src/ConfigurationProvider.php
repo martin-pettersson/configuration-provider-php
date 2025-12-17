@@ -71,14 +71,12 @@ final class ConfigurationProvider implements ServiceProviderInterface
     public function configure(ContainerBuilderInterface $containerBuilder): void
     {
         $containerBuilder->addFactory(ConfigurationBuilderInterface::class, fn() => $this->configurationBuilder)
-            ->singleton()
-            ->alias('configuration-builder');
+            ->singleton();
         $containerBuilder->addFactory(
             ConfigurationSourceProducerRegistryInterface::class,
             fn() => $this->configurationSourceProducers
         )
-            ->singleton()
-            ->alias('configuration-source-producer-registry');
+            ->singleton();
         $containerBuilder->addFactory(ConfigurationManagerInterface::class, function () {
             if (is_null($this->configurationManager)) {
                 throw new RuntimeException(
@@ -88,8 +86,7 @@ final class ConfigurationProvider implements ServiceProviderInterface
 
             return $this->configurationManager;
         })
-            ->singleton()
-            ->alias('configuration-manager');
+            ->singleton();
         $containerBuilder->addFactory(ConfigurationInterface::class, function () {
             if (is_null($this->configurationManager)) {
                 throw new RuntimeException(
@@ -99,8 +96,7 @@ final class ConfigurationProvider implements ServiceProviderInterface
 
             return $this->configurationManager->current();
         })
-            ->singleton()
-            ->alias('configuration');
+            ->singleton();
     }
 
     /**
